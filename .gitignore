@@ -1,0 +1,10 @@
+node_modules/
+package-lock.json
+*.jpg
+*.jpeg
+*.png
+*.aif
+*.wav
+*.mp3
+*.mp4
+*.pdf

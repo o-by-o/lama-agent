@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Расписание — Апрель 2026 | Московский Дацан «Гандан Чойпэлин»</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman:ital,wght@0,400;0,700;1,400&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #f5f0e8;
+      font-family: "Times New Roman", Times, serif;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 30px 20px;
+    }
+
+    .page {
+      background: #ffffff;
+      width: 720px;
+      padding: 28px 32px 28px 32px;
+      box-shadow: 0 4px 32px rgba(80,50,0,0.13), 0 1px 4px rgba(80,50,0,0.08);
+      border: 1px solid #d4c09a;
+    }
+
+    /* ─── HEADER ─── */
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 2px solid #8b1a1a;
+    }
+
+    .header-photo {
+      flex: 0 0 220px;
+      height: 148px;
+      overflow: hidden;
+      border: 2px solid #8b1a1a;
+    }
+
+    .header-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+    }
+
+    .header-title {
+      flex: 1;
+      text-align: right;
+    }
+
+    .header-title h1 {
+      font-size: 28px;
+      font-weight: 900;
+      color: #1a1a1a;
+      line-height: 1.2;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .header-title h1 em {
+      font-style: normal;
+      color: #8b1a1a;
+    }
+
+    /* ─── SUBTITLE ─── */
+    .subtitle {
+      text-align: center;
+      margin-bottom: 14px;
+    }
+
+    .subtitle p.main {
+      font-size: 17px;
+      font-weight: bold;
+      color: #8b1a1a;
+      margin-bottom: 3px;
+    }
+
+    .subtitle p.main span.month {
+      text-decoration: underline;
+      font-weight: 900;
+    }
+
+    .subtitle p.location {
+      font-size: 15px;
+      font-weight: bold;
+      color: #1a1a1a;
+    }
+
+    /* ─── TABLE ─── */
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .schedule-table th {
+      border: 1px solid #444;
+      padding: 6px 8px;
+      text-align: left;
+      font-weight: bold;
+      font-size: 14px;
+      background: #f9f4ec;
+      color: #1a1a1a;
+    }
+
+    .schedule-table td {
+      border: 1px solid #888;
+      padding: 5px 8px;
+      color: #1a1a1a;
+    }
+
+    .schedule-table td.col-date {
+      text-align: center;
+      width: 44px;
+      font-weight: normal;
+    }
+
+    .schedule-table td.col-lunar {
+      text-align: center;
+      width: 52px;
+    }
+
+    .schedule-table td.col-time {
+      text-align: center;
+      width: 58px;
+    }
+
+    .schedule-table td.col-khural {
+      width: auto;
+    }
+
+    /* Regular alternating rows */
+    .schedule-table tr.regular td {
+      background: #ffffff;
+    }
+
+    /* Special rows — bold, red date & lunar */
+    .schedule-table tr.special td {
+      background: #ffffff;
+    }
+
+    .schedule-table tr.special td.col-date,
+    .schedule-table tr.special td.col-lunar {
+      color: #8b1a1a;
+      font-weight: bold;
+    }
+
+    .schedule-table tr.special td.col-time {
+      color: #8b1a1a;
+      font-weight: bold;
+    }
+
+    .schedule-table tr.special td.col-khural {
+      font-weight: bold;
+      color: #1a1a1a;
+    }
+
+    /* Highlighted names */
+    .highlight-green {
+      color: #2d6a2d;
+    }
+
+    .highlight-yellow {
+      color: #b8860b;
+    }
+
+    .highlight-blue {
+      color: #1a4a8b;
+    }
+
+    /* ─── FOOTER ─── */
+    .footer {
+      text-align: center;
+      font-size: 13px;
+      color: #1a1a1a;
+      line-height: 1.6;
+      border-top: 1px solid #c8b890;
+      padding-top: 10px;
+    }
+
+    .footer .daily {
+      font-style: italic;
+      color: #8b1a1a;
+      font-weight: bold;
+      margin-bottom: 2px;
+    }
+
+    .footer .daily span.underline {
+      text-decoration: underline;
+    }
+
+    .footer .daily span.jamsa {
+      color: #8b1a1a;
+      font-weight: 900;
+    }
+
+    .footer .phones {
+      font-size: 12px;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-photo">
+      <img src="datsan.jpg" alt="Московский Дацан «Гандан Чойпэлин»">
+    </div>
+    <div class="header-title">
+      <h1>МОСКОВСКИЙ<br>ДАЦАН<br><em>«ГАНДАН<br>ЧОЙПЭЛИН»</em></h1>
+    </div>
+  </div>
+
+  <!-- SUBTITLE -->
+  <div class="subtitle">
+    <p class="main">Расписание на <span class="month">АПРЕЛЬ</span> 2026 г.</p>
+    <p class="location">Дуган - Юрта, ст. метро Ольховая</p>
+  </div>
+
+  <!-- TABLE -->
+  <table class="schedule-table">
+    <thead>
+      <tr>
+        <th class="col-date">Дата</th>
+        <th class="col-lunar">Лун.<br>день</th>
+        <th class="col-time">Время</th>
+        <th class="col-khural">Хурал</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="special">
+        <td class="col-date">1</td>
+        <td class="col-lunar">15</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural"><span class="highlight-yellow">ЛАМЧОГ НИМБО</span></td>
+      </tr>
+      <tr class="regular">
+        <td class="col-date">2</td>
+        <td class="col-lunar">15</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Даши Зэгбэ, Найман Гэгээн</td>
+      </tr>
+      <tr class="regular">
+        <td class="col-date">3</td>
+        <td class="col-lunar">16</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Зурган Юр<span style="font-size:11px">ӨӨ</span>л</td>
+      </tr>
+      <tr class="special">
+        <td class="col-date">4</td>
+        <td class="col-lunar">17</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Сундуй</td>
+      </tr>
+      <tr class="special">
+        <td class="col-date">5</td>
+        <td class="col-lunar">18</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Банзарагша</td>
+      </tr>
+      <tr class="regular">
+        <td class="col-date">7</td>
+        <td class="col-lunar">20</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Табан Хариулга</td>
+      </tr>
+      <tr class="regular">
+        <td class="col-date">8</td>
+        <td class="col-lunar">21</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Цэдо, Хий мориной Сан</td>
+      </tr>
+      <tr class="regular">
+        <td class="col-date">9</td>
+        <td class="col-lunar">22</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Даши Зэгбэ, Найман Гэгээн</td>
+      </tr>
+      <tr class="regular">
+        <td class="col-date">10</td>
+        <td class="col-lunar">23</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Зурган Юр<span style="font-size:11px">ӨӨ</span>л</td>
+      </tr>
+      <tr class="special">
+        <td class="col-date">11</td>
+        <td class="col-lunar">24</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Алтан гэрэл</td>
+      </tr>
+      <tr class="special">
+        <td class="col-date">12</td>
+        <td class="col-lunar">25</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Гал тахилга</td>
+      </tr>
+      <tr class="regular">
+        <td class="col-date">14</td>
+        <td class="col-lunar">27</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Табан Хариулга</td>
+      </tr>
+      <tr class="regular">
+        <td class="col-date">15</td>
+        <td class="col-lunar">28</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Цэдо, Хий мориной Сан</td>
+      </tr>
+      <tr class="regular">
+        <td class="col-date">16</td>
+        <td class="col-lunar">29</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Даши Зэгбэ, Найман Гэгээн</td>
+      </tr>
+      <tr class="special">
+        <td class="col-date">17</td>
+        <td class="col-lunar">30</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural"><span class="highlight-green">МАНДАЛ ШИВА</span></td>
+      </tr>
+      <tr class="special">
+        <td class="col-date">18</td>
+        <td class="col-lunar">1</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Дамжан Дорлиг Сахюусан</td>
+      </tr>
+      <tr class="special">
+        <td class="col-date">19</td>
+        <td class="col-lunar">2</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Жигжет</td>
+      </tr>
+      <tr class="regular">
+        <td class="col-date">21</td>
+        <td class="col-lunar">4</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Табан Хариулга</td>
+      </tr>
+      <tr class="regular">
+        <td class="col-date">22</td>
+        <td class="col-lunar">5</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Цэдо, Хий мориной Сан</td>
+      </tr>
+      <tr class="regular">
+        <td class="col-date">23</td>
+        <td class="col-lunar">7</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Даши Зэгбэ, Найман Гэгээн</td>
+      </tr>
+      <tr class="special">
+        <td class="col-date">24</td>
+        <td class="col-lunar">8</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural"><span class="highlight-blue">ОТОШО</span></td>
+      </tr>
+      <tr class="special">
+        <td class="col-date">25</td>
+        <td class="col-lunar">9</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Лусад тахилга</td>
+      </tr>
+      <tr class="special">
+        <td class="col-date">26</td>
+        <td class="col-lunar">10</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Намсарай сахюусан</td>
+      </tr>
+      <tr class="regular">
+        <td class="col-date">28</td>
+        <td class="col-lunar">12</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Табан Хариулга</td>
+      </tr>
+      <tr class="regular">
+        <td class="col-date">29</td>
+        <td class="col-lunar">13</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Цэдо, Хий мориной Сан</td>
+      </tr>
+      <tr class="special">
+        <td class="col-date">30</td>
+        <td class="col-lunar">14</td>
+        <td class="col-time">15:00</td>
+        <td class="col-khural">Жадонба</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p class="daily">
+      Каждый день (<span class="underline">Кроме пн.</span>) в 11:00 – хурал <span class="jamsa">Жамсаран Сахюусан</span>
+    </p>
+    <p class="phones">
+      Телефоны лам: Д. Баясхалан лама +7-924-759-88-45<br>
+      Р. Гончок лама +7-902-161-43-35, Ц. Жаргал лама +7-914-123-33-08
+    </p>
+  </div>
+
+</div>
+</body>
+</html>
