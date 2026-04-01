@@ -1,0 +1,5 @@
+anthropic
+python-pptx
+reportlab
+pymupdf
+pillow
